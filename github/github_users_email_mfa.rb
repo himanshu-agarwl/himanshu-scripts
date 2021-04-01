@@ -1,7 +1,7 @@
 require "octokit"
 require "csv"
 
-ORG_NAME = "NONAME"
+ORG_NAME = ENV["GITHUB_ORG_NAME"]
 def octokit_client
   if @client.nil?
     print 'Github Access token:'

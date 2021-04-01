@@ -5,7 +5,7 @@ require "oktakit"
 require "pry"
 
 OOB_URI = "urn:ietf:wg:oauth:2.0:oob".freeze
-APPLICATION_NAME = "APPNAME".freeze
+APPLICATION_NAME = ENV["APPLICATION_NAME"].freeze
 CREDENTIALS_PATH = "/Users/himanshu/Desktop/temp_google_code/credentials.json".freeze
 TOKEN_PATH = "token.yaml".freeze
 SCOPES = [Google::Apis::AdminDirectoryV1::AUTH_ADMIN_DIRECTORY_GROUP_READONLY, Google::Apis::AdminDirectoryV1::AUTH_ADMIN_DIRECTORY_USER_READONLY]
