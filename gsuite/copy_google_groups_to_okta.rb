@@ -110,10 +110,10 @@ def copy_google_group_membership_to_okta()
     end
     puts ggroup.name
     google_group_members(ggroup).each do |gmember|
-      if (gmember.status != "ACTIVE"){
-        puts "google group : " ggroup.name + "member email: " + gmember.email + " - Is suspended, ignoring"
+      if (gmember.status != "ACTIVE")
+        puts "google group : " + ggroup.name + "member email: " + gmember.email + " - Is suspended, ignoring"
         next
-      }
+      end
       omember = ousers.select { |h| h["profile"]["email"] == gmember.email}.first.id
       puts "Adding " + omember.email + " to " + ogroup.name
       client_okta.add_user_to_group(ogroup.id, omember.id)
