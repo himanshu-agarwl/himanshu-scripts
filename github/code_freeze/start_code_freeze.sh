@@ -1,7 +1,7 @@
 #!/bin/bash
 
-REPOORG="mdcollab"
-REPO_NAMES=("infra")
+REPOORG="ORGNAME"
+REPO_NAMES=("REPONAME1" "REPONAME2")
 CODEFREEZEBRANCH="code_freeze_dec_2021"
 read -p "Enter your github username: " GITHUB_USER
 read -p "Enter your github access token: " GITHUB_TOKEN
