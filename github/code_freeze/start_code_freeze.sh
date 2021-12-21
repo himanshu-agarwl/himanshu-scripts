@@ -8,8 +8,7 @@ read -p "Enter your github access token: " GITHUB_TOKEN
 
 for repo in "${REPO_NAMES[@]}"
 do
-  echo "For repository: ${REPOORG}/${repo}" 
-  read -p "Confirm if you want to trigger code freeze for the repo.." yn
+  echo "Settings for repository: ${repo}" 
 
   echo "cloning repository"
   `git clone git@github.com:${REPOORG}/${repo}`
